@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitio Web Onepage</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="api.js" defer></script>
+  <!-- <script src="app.js" defer></script> -->
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <nav>
+      <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#content">Contenido</a></li>
+        <li><a href="#api-section">API</a></li>
+        <li><a href="#form">Formulario</a></li>
+      </ul>
+    </nav>
+    <h1>Anime Universe</h1>
+  </header>
+
+  <!-- Sección Principal -->
+  <section id="home" class="text">
+    <!-- Contenedor del Carrusel -->
+    <div id="anime-carousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#anime-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#anime-carousel" data-slide-to="1"></li>
+        <li data-target="#anime-carousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" id="carousel-images">
+        <!-- Aquí se insertarán las imágenes del carrusel dinámicamente -->
+      </div>
+      <a class="carousel-control-prev" href="#anime-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#anime-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Sección de API -->
+  <section id="api-section" class="text">
+    <h2>Anime Universe tu fuente de anime online gratis en HD</h2>
+      <!-- Aquí se mostrarán los datos de la API -->
+    </div>
+  </section>
+
+  <!-- Sección de Contenido -->
+  <section id="content" class="text">
+    <div id="releases-container"></div> <!-- Contenedor para los estrenos -->
+    <div id="api-data-anime"></div>
+  </section>
+
+  <!-- Sección del Formulario -->
+  <section id="form" class="text">
+    <h2>Crea tu Cuenta</h2>
+    <form id="contact-form">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" >
+      <span class="error" id="name-error"></span>
+
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" >
+      <span class="error" id="email-error"></span>
+
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message" ></textarea>
+      <span class="error" id="message-error"></span>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="form-feedback"></p>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+  <script src="app.js"></script>
+  <footer>
+    <p>&copy; 2024 Mi Sitio Web Anime. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

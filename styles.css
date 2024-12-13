@@ -1,0 +1,240 @@
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: #121212; /* Fondo oscuro */
+  color: #e0e0e0; /* Texto claro */
+}
+
+/* Header */
+header {
+  background: #1f1f1f; /* Fondo oscuro */
+  color: #e0e0e0; /* Texto claro */
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #1f1f1f;
+  width: 200px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+header nav ul.open {
+  transform: translateX(0);
+}
+
+header nav ul li {
+  margin: 15px 0;
+}
+
+header nav ul li a {
+  color: #e0e0e0; /* Texto claro */
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+header nav ul li a:hover {
+  background-color: #333;
+}
+
+header .menu-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+header .menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #e0e0e0;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+header .menu-icon.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+header .menu-icon.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+header .menu-icon.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* Secciones */
+section {
+  padding: 0rem;
+  background-color: #181818; /* Fondo oscuro */
+}
+
+section:nth-child(even) {
+  background: #222222; /* Fondo oscuro alternativo */
+}
+
+section h2 {
+  color: #e0e0e0; /* Texto claro */
+}
+
+#content, #form, #api-section {
+  padding: 2rem;
+}
+
+/* Formulario */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #333; /* Fondo oscuro */
+  color: #e0e0e0; /* Texto claro */
+  border: 1px solid #444; /* Borde oscuro */
+}
+
+form button {
+  background-color: #555; /* Fondo oscuro */
+  color: #e0e0e0; /* Texto claro */
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #777; /* Fondo más claro al pasar el ratón */
+}
+
+.error {
+  color: #ff6b6b; /* Rojo claro */
+  font-size: 0.9rem;
+}
+
+#form-feedback {
+  color: #4caf50; /* Verde claro */
+}
+
+.text {
+  text-align: center;
+}
+
+.text h2 {
+  padding: 1rem;
+}
+
+/* Estilos para las tarjetas de Anime */
+.product-card {
+  position: relative;
+  width: 100%;
+  height: 420px; /* Altura fija para las tarjetas */
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #222; /* Fondo oscuro */
+}
+
+.product-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente oscuro */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay-content {
+  text-align: center;
+}
+
+.product-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Estilos para el carrusel */
+#anime-carousel {
+  width: 100%;
+  height: 500px; /* Altura fija para el carrusel */
+  z-index: 1;
+}
+
+#anime-carousel .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+#anime-carousel .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+#anime-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+}
+
+#anime-carousel .carousel-caption {
+  background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente oscuro */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#anime-carousel h5 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+#anime-carousel p {
+  color: #ddd;
+}
+
+footer {
+  background-color: #1f1f1f; /* Fondo oscuro */
+  color: #e0e0e0; /* Texto claro */
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
